@@ -1,0 +1,23 @@
+{
+  "name": "albums",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "mocha-phantomjs 1.0/spec/index.html -t 40000 -R dot"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/shepherdwind/albums.git"
+  },
+  "devDependencies": {
+    "grunt-contrib-uglify": "~0.2.0",
+    "grunt": "~0.4.1",
+    "grunt-kmc": "~0.1.1",
+    "grunt-contrib-cssmin": "~0.6.0"
+  },
+  "dependencies": {
+    "grunt-contrib-cssmin": "~0.6.1",
+    "grunt-contrib-copy": "~0.4.1",
+    "grunt-css-combo": "~0.2.2",
+    "grunt-kissy-template": "~0.1.2"
+  }
+}

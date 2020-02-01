@@ -1,0 +1,58 @@
+.ks-overlay-content .ke-container-default{
+    margin: 0 auto;
+    margin-top: 10px;
+}
+.form-default .control-group .title-input{
+    width: 150px;
+}
+
+.loadingPins{
+    height: 50px;background: url(../images/loading.gif) center center no-repeat;
+}
+.admin_shop_self_defined{
+    padding-top: 10px;
+}
+#popSetDiscountCommision .self_time_selector{display: inline;}
+#popSetDiscountCommision.time_calendar{
+ height: 35px;
+}
+
+.item_choose .search_type{display: inline; width: 320px;}
+.item_choose .manual-rec-content .select_search_type{
+    border: 1px solid #cacaca;
+    color: #999;
+    height: 24px;
+    margin-left: 6px;
+    padding: 2px 3px;
+}
+.item_choose .manual-rec-content .select_search_type{
+    border: 1px solid #cacaca;
+    color: #999;
+    height: 24px;
+    margin-left: 6px;
+    padding: 2px 3px;
+}
+.manual-rec-content .item .detail-info {float: none;}
+.manual-rec-content .item .pic, .manual-rec-content .item .detail-info{height: auto;float: none;}
+.order_move{width: 80px;height: 80px;}
+.order_move b{
+    background: url(../images/arr.png) no-repeat;width: 11px;height: 13px;display: block;
+    display: block;
+    float: left;
+    height: 14px;
+    margin-left: 20px;
+    margin-top: 15px;
+    width: 11px;
+    cursor: pointer;
+}
+#popup_item_content .ks-overlay-content .tshop-um-sys_cate_brand_select .filter .type,#popup_item_content .admin_module .tshop-um-sys_cate_brand_select .filter .type{padding-left: 100px;}
+#popup_item_content .ks-overlay-content .content_box{position:static;}
+.order_move{margin: 0 auto;}
+.order_move .move_top{background-position:0 0;}
+.order_move .move_up{background-position:-25px 0;}
+.order_move .move_down{background-position:-50px 1px;}
+.order_move .move_btm{background-position:-75px 0;}
+.sys_company_brand_search .item img{width: 50px;}
+#pop_time_selector .ks-dtp{position: static;margin: 0 auto;padding: 20px 0 0 0;border: none;}
+#pop_time_selector .dtp-date{margin-left: 12px;width:270px;}
+.dtp-date .data-calendar td, .dtp-date .data-calendar th{width:36px;}

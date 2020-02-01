@@ -1,0 +1,14 @@
+{
+    "name":"albums",
+    "version":"1.1",
+    "desc":"相册灯箱组件",
+    "cover":"",
+    "author":{
+    "name":"hanwen.sah",
+    "email":"hanwen.sah@taobao.com",
+    "page":"请修改作者个人首页"
+},
+    "type":"kissy-pie",
+    "type-url":"http://abc.alibaba-inc.com/r/kissy-pie",
+    "githubName":"shepherdwind"
+}

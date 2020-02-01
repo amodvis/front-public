@@ -1,0 +1,1770 @@
+/* 居中 */
+#bd, #ft, #content .layout, #footer {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#bd, #ft {
+    position: relative;
+    overflow: hidden;
+}
+
+#ft {
+    position: static;
+}
+
+/*提高优先级，覆盖detail hd样式*/
+#content #hd {
+    max-height: 150px;
+    overflow: hidden;
+    padding-bottom: 0;
+    position: relative;
+}
+
+/*将头部的下边距放到hd中 设计师可以通过覆盖来决定是不是要这个10px*/
+#hd {
+    margin-bottom: 10px;
+}
+
+/** 布局基础样式 **/
+.col-main {
+    float: left;
+    width: 100%;
+    /* bug fix: 主栏没有内容时，在 Firefox 和 Chrome 等浏览器下，布局不对 */
+    min-height: 1px;
+}
+
+.col-sub, .col-extra {
+    float: left;
+    /*position: relative;  按需设置，仅在需要时添加 */
+}
+
+/** 清除浮动，注：包含模块级的浮动清除 **/
+.layout:after, .main-wrap:after, .col-sub:after, .col-extra:after {
+    content: '\20';
+    display: block;
+    height: 0;
+    clear: both;
+}
+
+.layout, .main-wrap, .col-sub, .col-extra {
+    *zoom: 1;
+}
+
+/*装修系统全局 css 文件 页面都必须包含 */
+html {
+    _background: url(null) fixed;
+    _overflow-x: hidden;
+}
+
+/*覆盖浏览里面的layout*/
+#page #hd {
+    overflow: hidden;
+    max-height: none;
+}
+
+/* 拖拽css   */
+#page .ks-dd-dragging {
+    border: 2px #3C9CE7 dashed !important;
+    width: 98% !important;
+}
+
+#page .ks-dd-proxy {
+    display: none;
+}
+
+#page .ks-dd-dragging * {
+    visibility: hidden !important;
+}
+
+.component_layout .ks-dd-dragging {
+    border: 1px #3C9CE7 dashed;
+    height: 22px;
+}
+
+.component_layout .ks-dd-proxy {
+   display: none;
+}
+
+.component_layout .ks-dd-dragging * {
+    visibility: hidden !important;
+}
+
+.tb-hidden {
+    display: none !important;
+}
+
+.tb-ext-mask {
+    background-color: black;
+    bottom: 0;
+    left: 0;
+    opacity: 0.1;
+    filter: alpha(opacity=10);
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 10000;
+}
+
+.clear-fix:after {
+    content: '\20';
+    display: block;
+    height: 0;
+    clear: both;
+}
+
+.clear-fix {
+    *zoom: 1;
+}
+
+html {
+    overflow: visible;
+}
+
+body {
+    /*overflow: hidden;*/
+}
+
+#wrapper {
+    *zoom: 1;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    overflow: auto;
+}
+
+#wrapper:before,
+#wrapper:after {
+    display: table;
+    content: "";
+}
+
+#wrapper:after {
+    clear: both;
+}
+
+#wrapper #main {
+    float: left;
+    overflow: relative;
+    width: 950px;
+    min-width: 770px;
+    display: none;
+    margin-left: 180px;
+}
+
+#container {
+    margin-top: 31px;
+}
+
+#navbar {
+    width: 100%;
+    height: 34px;
+    background-color: white;
+    z-index: 10000391;
+    border-bottom: 1px #b45e20 solid;
+}
+
+#navbar .navbg {
+    border-bottom: #E77829 4px solid;
+    width: 100%;
+    height: 30px;
+    position: relative;
+    z-index: 10000391;
+    background-color: white;
+}
+
+#navbar a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#navbar .navbg .logo {
+    position: relative;
+    left: 10px;
+    height: 25px;
+    top: 1px;
+}
+
+#navbar .navbg .nav {
+    position: absolute;
+    left: 159px;
+    top: 0px;
+    height: 30px; /* maybe no use*/
+    padding: 0;
+}
+
+#navbar li {
+    list-style: none;
+}
+
+#navbar .navbg .nav li.dropdown {
+    float: left;
+    height: 34px;
+    display: block; /*使链接看起来像个按钮    */
+    cursor: pointer;
+    position: relative; /*使子元素可以根据其位置定位*/
+    z-index: 10000391;
+}
+
+#navbar .navbg .nav li.dropdown .dropdown-main {
+    font-size: 14px;
+    font-family: '微软雅黑';
+    color: #333333;
+    font-weight: bold;
+    position: absolute;
+    bottom: 9px;
+    left: 10px;
+    line-height: 100%;
+}
+
+#navbar .navbg .nav li.dropdown .trigan {
+    position: absolute;
+    right: 10px;
+    margin-left: 5px;
+    height: 4px;
+    top: 17px;
+}
+
+#navbar .navbg .nav li.dropdown .triangle {
+    border-color: #b2b2b2 #ffffff #ffffff #ffffff;
+    border-style: solid;
+    border-width: 4px;
+    display: inline-block;
+    font-size: 0;
+    line-height: 4px;
+    background-color: #ffffff;
+    vertical-align: top;
+}
+
+#navbar .navbg .nav .dropdown.hover {
+    background-color: #e77829;
+}
+
+#navbar .navbg .nav li.dropdown.hover .dropdown-main {
+    color: white;
+    background-color: #e77829;
+}
+
+#navbar .navbg .nav li.hover .triangle {
+    border-color: #A1541D #E77829 #E77829 #E77829;
+    background-color: #E77829;
+}
+
+#navbar .navbg .nav li.hover .sub {
+    display: block;
+}
+
+#navbar .navbg .nav li.dropdown.current .dropdown-main {
+    color: #e77829;
+}
+
+#navbar .navbg .nav li.dropdown.hover .dropdown-main {
+    color: white; /*必须有，否则chrome下.curret.hover字体为黄色，ie6如果是.current.hover则hover移除后字体还是白色*/
+}
+
+#navbar .navbg .nav .sub {
+    background-color: #e77829;
+    display: none;
+    position: absolute; /*relative 导致ie下出现z-index的遮*/
+    top: 34px;
+    /*必须跟兄弟元素衔接，不然鼠标hover中间有空隙  */
+    padding: 0px; /*没有的话左侧出现多余框？？？*/
+    z-index: 10000391;
+}
+
+#navbar .navbg .nav .sub1 {
+    width: 94px;
+}
+
+#navbar .navbg .nav .sub1 .analyze {
+    background: url(http://img02.taobaocdn.com/tps/i2/T15RwBXctaXXXbIq6d-32-13.png) no-repeat right;
+}
+
+#navbar .navbg .nav .sub2 {
+    width: 103px;
+}
+
+#navbar .navbg .nav .sub li {
+    border: 1px solid #e77829; /*否则ie6下出现li下面有空格，与padding，margin，boreder无关*/
+}
+
+#navbar .navbg .nav .sub li a {
+    color: white;
+    font-family: '宋体';
+    font-size: 12px;
+    display: block;
+    line-height: 30px; /*标出字体实际大小和所在行高度，实现居中*/
+    padding-left: 10px;
+}
+
+#navbar .navbg .nav .sub li a:hover {
+    background-color: #B74F04;
+    border: #B74F04;
+}
+
+#navbar .navbg .account-nav {
+    position: absolute; /*相对navbar是relative的位置，否则父元素不确定，嵌套后会出错*/
+    font-family: '宋体';
+    color: #666666;
+    font-size: 12px;
+    height: 30px;
+    top: 0;
+    right: 20px;
+    zoom: 1;
+    _width: 500px;
+}
+
+#navbar .navbg .account-nav a {
+    color: #666666;
+    line-height: 14px;
+}
+
+#navbar .navbg .account-nav .nav-collapse {
+    position: relative;
+    height: 100%;
+}
+
+#navbar .navbg .account-nav .nav-collapse li {
+    float: left;
+}
+
+#navbar .navbg .account-nav .nav-collapse .shopdetail {
+    position: relative;
+    height: 100%;
+}
+
+#navbar .navbg .account-nav .nav-collapse .sub {
+    position: relative;
+    height: auto;
+    top: 9px;
+    top: 9px;
+    color: #7f7f7f;
+    width: 2px;
+}
+
+#navbar .navbg .account-nav .nav-collapse .rollback,
+#navbar .navbg .account-nav .nav-collapse .shopdetail {
+    width: 48px;
+}
+
+#navbar .navbg .account-nav .nav-collapse .free a,
+#navbar .navbg .account-nav .nav-collapse .shopdetail a,
+#navbar .navbg .account-nav .nav-collapse .rollback a,
+#navbar .navbg .account-nav .nav-collapse .help a {
+    position: relative;
+    top: 9px;
+}
+
+#navbar .navbg .account-nav .nav-collapse .help a,
+#navbar .navbg .account-nav .nav-collapse .rollback a {
+    *top: 10px;
+    _top: 9px;
+}
+
+#navbar .navbg .account-nav .nav-collapse .shopdetail a {
+    *top: 12px;
+}
+
+#navbar .navbg .account-nav .nav-collapse .rollback {
+    margin-right: 20px;
+    position: relative;
+    height: 100%;
+}
+
+#navbar .navbg .account-nav .nav-collapse li {
+    margin-right: 10px;
+}
+
+#navbar .navbg .account-nav .nav-collapse .shopdetail a,
+#navbar .navbg .account-nav .nav-collapse .rollback a {
+    color: #ff6600;
+}
+
+#navbar .navbg .account-nav .nav-collapse .help {
+    position: relative;
+    height: 100%;
+    margin-right: 5px;
+    width: 24px;
+}
+
+#navbar .navbg .account-nav .account-dropdown {
+    display: block;
+    z-index: 10000391;
+    height: 36px;
+    position: relative;
+    cursor: pointer;
+    width: 50px;
+}
+
+#navbar .navbg .account-nav .account-dropdown .account {
+    height: 35px;
+    position: relative;
+    z-index: 10000391;
+}
+
+#navbar .navbg .account-nav .account .account-main {
+    left: 7px;
+    position: relative;
+    bottom: -9px;
+    font: 12px;
+    margin-right: 5px;
+}
+
+#navbar .navbg .account-nav .account .triangle {
+    border-color: #b2b2b2 #ffffff #ffffff #ffffff;
+    border-style: solid;
+    border-width: 4px;
+    display: inline-block;
+    font-size: 0;
+    background-color: #ffffff;
+    position: absolute;
+    bottom: 10px;
+    right: 6px;
+}
+
+#navbar .navbg .account-nav .account-sub {
+    position: absolute;
+    right: 0px;
+    _right: -1px; /*ie6 hack*/
+    top: 35px;
+    width: 180px;
+    border: 1px solid #d4d4d4;
+    display: none;
+    height: 70px;
+    z-index: 10000391;
+    box-shadow: 0px 0px 5px #bababa;
+    background-color: white;
+}
+
+#navbar .navbg .account-nav .hover .account {
+    border-left: 1px solid #d4d4d4;
+    border-bottom: none;
+    background-color: white;
+    border-top: 1px solid #d4d4d4;
+    border-right: 1px solid #d4d4d4;
+    -webkit-box-shadow: 0px -5px 5px #bababa;
+    -moz-box-shadow: 0px -5px 5px #bababa;
+    box-shadow: 0px -5px 5px #bababa;
+}
+
+#navbar .navbg .account-nav .hover .account-sub {
+    display: block;
+}
+
+#navbar .navbg .account-nav .account-sub li {
+    float: none;
+    width: 180px;
+}
+
+#navbar .navbg .account-nav .account-sub .account-name {
+    display: inline-block;
+    margin: 0 6px;
+    padding-left: 5px;
+    width: 163px;
+    height: 38px;
+    line-height: 38px;
+    border-bottom: 1px solid #d4d4d4;
+    font-weight: bold;
+}
+
+#navbar .navbg .account-nav .account-sub .account-exit {
+    height: 32px;
+    padding: 0px;
+    float: left;
+    margin: 0px;
+}
+
+#navbar .navbg .account-nav .account-sub .account-exit .exit {
+    position: relative;
+    top: 10px;
+    float: right;
+    margin: 0 5px;
+}
+
+#navbar .account-sub .img {
+    position: relative;
+    top: 8px;
+    float: right;
+    background: url("http://img04.taobaocdn.com/tps/i4/T1Wn6uXg4hXXadE...-14-15.png") no-repeat;
+
+}
+
+#navbar .account-sub .hover {
+    background-color: #eeeeee;
+}
+
+#navbar .account-sub .hover .img {
+    background: url('http://img02.taobaocdn.com/tps/i2/T1BCTvXmXeXXbBC...-14-15.jpg') no-repeat;
+}
+
+#navbar .account-nav .free {
+    width: 110px;
+}
+
+#navbar .account-nav .free a {
+    cursor: default;
+}
+
+#navbar .account-nav .free span {
+    color: #ff6600;
+}
+
+#navbar .account-nav .account-dropdown .account-exit .payback {
+    color: #0066cc;
+    left: 12px;
+    top: 47px;
+    position: absolute;
+}
+
+#navbar .payback-tip {
+    width: 259px;
+    height: 44px;
+    right: -8px;
+    position: absolute;
+}
+
+#navbar .account-nav .own-free,
+#navbar .account-nav .change-module {
+    background: #ff9933;
+    height: 23px;
+    width: 98px;
+    border-width: 1px;
+    border-style: solid;
+    border-bottom-color: #d2d2d2;
+    border-left-color: #d2d2d2;
+    border-right-color: #eab47e;
+    border-top-color: #e4bb92;
+    position: relative;
+    top: 5px;
+}
+
+#navbar .account-nav .own-free {
+    border-width: 1px 0;
+    width: 103px;
+    text-align: center;
+}
+
+#navbar .account-nav .change-hover {
+    background: #ff6600;
+    border-top-color: #e4a77e;
+    border-right-color: #e4a77e;
+}
+
+#navbar .account-nav .own-free a,
+#navbar .account-nav .change-module a {
+    color: white;
+    margin: 0 7px;
+}
+
+#navbar .navbg .account-nav .nav-collapse .li-a {
+    line-height: 23px;
+}
+
+.hidden {
+    display: none;
+}
+
+#navbar .navbg .appCenter {
+    background: url(http://img04.taobaocdn.com/tps/i4/T1mRkeXfRbXXXYgf6c-27-11.png) no-repeat top right;
+}
+
+#J_IKnow {
+    position: absolute;
+    bottom: 0px;
+    height: 16px;
+    right: -10px;
+    cursor: pointer;
+    width: 60px;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    background: #ffffe6;
+}
+
+#toolbar .hidden,
+#toolbar .tb-hidden {
+    display: none !important;
+}
+
+#toolbar {
+    height: 30px;
+    width: 100%;
+    background: #fff;
+    border-bottom: 1px solid #e4e4e4;
+    position: fixed;
+    _position: absolute;
+    _top: expression(document.getElementById('wrapper').scrollTop+'px');
+    z-index: 10000372;
+    *zoom: 1;
+}
+
+#toolbar:before,
+#toolbar:after {
+    display: table;
+    content: "";
+}
+
+#toolbar:after {
+    clear: both;
+}
+
+#toolbar .operater {
+    position: absolute;
+    left: 0;
+}
+
+#toolbar .operater .toggleTrigger {
+    *zoom: 1;
+    height: 30px;
+    line-height: 30px;
+    width: 110px;
+}
+
+#toolbar .operater .toggleTrigger:before,
+#toolbar .operater .toggleTrigger:after {
+    display: table;
+    content: "";
+}
+
+#toolbar .operater .toggleTrigger:after {
+    clear: both;
+}
+
+#toolbar .operater .toggleTrigger span {
+    display: block;
+    padding: 0 15px;
+    float: left;
+    font-weight: 400;
+}
+
+#toolbar .operater .toggleTrigger i {
+    display: block;
+    float: left;
+    width: 30px;
+    height: 30px;
+    border-right: 1px solid #dcdcdc;
+    background: url(http://img01.taobaocdn.com/tps/i1/T1h8zCXl8fXXXjMBLc-28-28.gif) no-repeat 1px 14px;
+    cursor: pointer;
+}
+
+#toolbar .operater .toggleTrigger i:hover {
+    background-position: 1px -8px;
+}
+
+#toolbar .operater .togglePanel {
+    width: 78px;
+    border-right: 1px solid #dcdcdc;
+    border-bottom: 1px solid #dcdcdc;
+}
+
+#toolbar .operater .togglePanel a {
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    color: #333;
+    background: #fff;
+    text-align: center;
+}
+
+#toolbar .operater .togglePanel a:hover {
+    background: #dbdbdb;
+    text-decoration: none;
+}
+
+#toolbar .operater .togglePanel a.del {
+    color: #333;
+}
+
+#toolbar .operater .togglePanel a.del:hover {
+    color: #ff3333;
+}
+
+#toolbar .operater .hide {
+    display: none;
+}
+
+#toolbar .hover {
+    cursor: pointer;
+    background-color: #E4E4E4;
+}
+
+#toolbar .optbar {
+    *zoom: 1;
+    position: absolute;
+    width: 98px;
+    height: 30px;
+    overflow: hidden;
+    right: 20px;
+}
+
+#toolbar .optbar:before,
+#toolbar .optbar:after {
+    display: table;
+    content: "";
+}
+
+#toolbar .optbar:after {
+    clear: both;
+}
+
+#toolbar .optbar a {
+    display: block;
+    float: left;
+    height: 22px;
+    line-height: 22px;
+    padding: 0 10px;
+    margin: 3px 0 3px 0;
+    border-width: 1px 0 1px 1px;
+    border-style: solid;
+    border-color: #ccc;
+    color: #000;
+    background: #f8f8f8;
+}
+
+#toolbar .optbar a:hover {
+    text-decoration: none;
+    background: #e4e4e4;
+}
+
+#toolbar .optbar a.release {
+    border: 1px solid #86cece;
+    background: #b7e2e2;
+}
+
+#toolbar .optbar a.release:hover {
+    background: #86cece;
+}
+
+#toolbar .ds-msgs {
+    position: absolute;
+    left: 45%;
+    text-align: center;
+    height: 30px;
+    z-index: 10000371;
+    top: 0;
+}
+
+#toolbar .ds-msgs .txt {
+    background-color: #FFFFE5;
+    border: 1px solid #F0C36D;
+    display: inline-block;
+    margin-top: 2px;
+    padding: 3px 36px;
+    text-align: left;
+}
+
+#toolbar .ds-msgs .error {
+    border: 1px solid #FF8080;
+    color: #f00;
+}
+
+#toolbar .ds-msgs .error .txt-icon {
+    display: inline-block;
+    height: 18px;
+    width: 16px;
+    vertical-align: middle;
+    margin-right: 5px;
+    background: url(http://img02.taobaocdn.com/tps/i2/T1Knu8XmNgXXXXXXXX-93-83.png) no-repeat scroll -45px 0;
+}
+
+.tb-dialog .btn-footer {
+    margin-left: 244px;
+    margin-top: 20px;
+}
+
+.tb-dialog .release-result .btn-footer {
+    margin-left: 218px;
+}
+
+.toolbar {
+    background: #d4d4d4 !important;
+    border-bottom: 1px solid #b0b0b0 !important;
+    -webkit-box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.toolbar-actions {
+    overflow: hidden;
+    margin-left: 12px;
+}
+
+.toolbar-actions li {
+    float: left;
+    padding-top: 4px;
+}
+
+.toolbar-actions li.toolbar-sep {
+    width: 1px;
+    height: 24px;
+    overflow: hidden;
+    margin-top: 4px;
+    background: url("http://img01.taobaocdn.com/tps/i1/T1It65XiXdXXXe8Isb-100-218.png") no-repeat right -46px;
+    padding: 0;
+    margin-right: 12px;
+}
+
+.toolbar-actions li.toolbar-disable {
+    color: #9c9b9b;
+    line-height: 23px;
+}
+
+.toolbar-actions li a {
+    float: left;
+    line-height: 23px;
+    margin-right: 12px;
+    color: #333;
+    position: relative;
+    zoom: 1;
+}
+
+.toolbar-actions li a span {
+    float: left;
+    height: 23px;
+    cursor: pointer;
+    padding: 0 6px;
+}
+
+.toolbar-actions li a.active,
+.toolbar-actions li a:hover {
+    background: url("http://img01.taobaocdn.com/tps/i1/T1It65XiXdXXXe8Isb-100-218.png") no-repeat;
+}
+
+.toolbar-actions li a.active span,
+.toolbar-actions li a:hover span {
+    background: url("http://img01.taobaocdn.com/tps/i1/T1It65XiXdXXXe8Isb-100-218.png") no-repeat right -23px;
+}
+
+.toolbar-opts {
+    position: absolute;
+    right: 20px;
+    top: 3px;
+}
+
+.toolbar-opts a {
+    float: left;
+    margin-left: 5px;
+    color: #333;
+    text-align: center;
+    background: url("http://img01.taobaocdn.com/tps/i1/T1It65XiXdXXXe8Isb-100-218.png") no-repeat 0 -70px;
+}
+
+.toolbar-opts a span {
+    float: left;
+    height: 24px;
+    line-height: 24px;
+    padding: 0 10px;
+    cursor: pointer;
+    background: url("http://img01.taobaocdn.com/tps/i1/T1It65XiXdXXXe8Isb-100-218.png") no-repeat right -94px;
+}
+
+.toolbar-opts a:hover {
+    background-position: 0 -118px;
+}
+
+.toolbar-opts a:hover span {
+    background-position: right -142px;
+}
+
+.toolbar-opts a:active {
+    background-position: 0 -166px;
+}
+
+.toolbar-opts a:active span {
+    background-position: right -190px;
+}
+
+.toolbar-opts a.release span {
+    font-weight: bold;
+    width: 70px;
+}
+
+/* ds-bar 模块操作工具条 {{{ */
+.bar {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 10000365;
+    top: 0;
+    left: 0;
+}
+
+.bar .barbd {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 10000361;
+    width: 100%;
+    height: 100%;
+    border-bottom: 0 solid #4aa3cc;
+    background-color: rgba(255, 255, 255, 0);
+    background-color: #fff \0/;
+    *background-color: #fff;
+    filter: alpha(opacity=0) \0/ ； * filter : alpha(opacity = 0);
+}
+
+.bar .baracts {
+    position: absolute;
+    z-index: 10000363;
+    top: 0;
+    left: 2px;
+    width: 98%;
+    visibility: hidden;
+    text-align: right;
+    height: 100%;
+    cursor: pointer;
+}
+
+/* 增加权重 */
+#page .bar .baracts a {
+    display: inline-block;
+    padding: 0;
+    margin-top: 0px;
+    margin-right: -2px;
+    background: url(https://amodvis-1300267279.cos.ap-chengdu.myqcloud.com/laravle-amodvis/amodvis/images/T1ZyvuXlljXXc0Ftwk-211-141.gif) no-repeat 0px 0px;
+    height: 21px;
+    width: 52px;
+    vertical-align: top;
+    text-decoration: none;
+}
+
+/*编辑的样式*/
+#page .bar .baracts a.ds-bar-edit {
+    background-position: -30px -18px;
+}
+
+#page .bar .baracts a.ds-bar-del {
+    background-position: -123px -19px;
+}
+
+/*左侧样式*/
+#page .grid-s5m0 .col-sub .bar .baracts a.ds-bar-edit {
+    background-position: -30px -68px;
+}
+
+#page .grid-s5m0 .col-sub .bar .baracts a.ds-bar-del {
+    background-position: -123px -68px;
+    width: 23px;
+}
+
+#page .bar .baracts a span {
+    line-height: 17px;
+}
+
+.bar .barbd, .bar .barbd {
+    text-align: center;
+    color: #0a3ccc;
+    font-weight: bold;
+    font-size:30px;
+    border-width: 1px;
+    background-color: rgba(192, 222, 237, .2);
+    background-color: #c0deed \0/;
+    *background-color: #c0deed;
+    filter: alpha(opacity=70) \0/;
+    /**filter: alpha(opacity=70);*/
+
+}
+
+.bar:hover .baracts, div.hover .baracts {
+    visibility: visible;
+}
+
+#page .bar .ifr {
+    width: 100%;
+    height: 160px;
+}
+
+/* }}} */
+
+/* 模块移动按钮 */
+#page .bar .ds-bar-moveup,
+#page .bar .ds-bar-movedown {
+    width: 22px;
+    height: 21px;
+}
+
+#page .bar .ds-bar-moveup {
+    background-position: -82px -18px;
+    margin-left: 6px;
+}
+
+#page .bar .ds-bar-movedown {
+    background-position: -101px -18px;
+    margin-right: 6px;
+}
+
+.bar .ds-bar-moveup span,
+.bar .ds-bar-movedown span {
+    display: none;
+}
+
+#page .bar .no-move-up,
+#page .bar .no-move-down {
+    cursor: no-drop;
+}
+
+#page .bar .no-move-up {
+    background-position: -84px -43px;
+
+}
+
+#page .bar .no-move-down {
+    background-position: -101px -43px;
+}
+
+#page .bar .baracts .ds-bar-add {
+    background-position: -14px -103px;
+    bottom: 1px;
+    position: absolute;
+    right: -1px;
+    width: 94px;
+}
+
+#page .bar .baracts .ds-bar-lock {
+    background-position: -119px -103px;
+    bottom: 1px;
+    position: absolute;
+    right: 101px;
+    width: 44px;
+    background-repeat: no-repeat;
+}
+
+#page .bar .baracts .pin_lock {
+    background-position: -168px -103px;
+}
+
+.component_layout .J_TEmptyBox .bar .barbd {
+    border-style: dashed;
+    height: 18px;
+}
+.component_layout .J_TEmptyBox{
+    height: 24px;
+    background: #f2f2f2;
+    border: #D4D4D4 1px solid;
+    margin-top: 5px;
+    text-align: center;
+    line-height: 24px;
+    color: #666;
+}
+/* }}} */
+/* 横向bar样式 */
+#page .tb-horizontal-bar bar .ds-bar-add {
+    position: static;
+    width: 82px;
+    background-position: -26px -103px;
+}
+
+/* 添加模块 {{{ */
+#mods-list .slide_box {
+    background-color: #ececec;
+    position: relative;
+}
+
+#mods-list .slide_box .my_trigger {
+    height: 500px;
+    left: 15px;
+    position: absolute;
+    top: 15px;
+    width: 160px;
+    overflow: hidden;
+}
+
+#mods-list .slide_box .my_trigger li {
+    border-bottom: 1px solid #bdbdbd;
+    line-height: 28px;
+    margin-right: 10px;
+    overflow: auto;
+    padding-left: 24px;
+    cursor: pointer;
+}
+
+#mods-list .slide_box .my_trigger li.cur {
+    color: #47B5FA;
+}
+
+#mods-list .slide_box .my_stage {
+    width: 300px;
+    height: 500px;
+    position: absolute;
+    left: 200px;
+    top: 10px;
+    overflow: hidden;
+}
+
+#mods-list .slide_box .my_stage .pin_item {
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+#mods-list .slide_box .my_stage .ColumnContainer {
+    overflow: auto;
+    height: 440px;
+}
+
+#mods-list .slide_box .J_PagesBottom {
+    margin-top: 5px;
+}
+
+#mods-list .pin_item .thumb img {
+    border: 1px solid #ccc;
+    float: left;
+    height: 64px;
+    margin-right: 10px;
+    margin-top: 3px;
+    width: 64px;
+}
+
+#mods-list .pin_item p {
+    float: left;
+    overflow: hidden;
+    width: 120px;
+    color: #999999;
+}
+
+#mods-list .pin_item p strong {
+    color: #000000;
+    display: block;
+    font-weight: normal;
+    margin-bottom: 3px;
+}
+
+/* 添加模块 }}} */
+
+.tb-dialog {
+    left: -9999px;
+    top: -9999px;
+    position: absolute;
+    z-index: 10000389;
+    width: 540px;
+    margin-left: -8px;
+    padding: 11px;
+    background: rgba(34, 34, 34, 0.5);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#1646464', EndColorStr='#1646464');
+}
+
+.tb-dialog .tb-stdmod-header {
+    background-color: #2D2D2D;
+    color: white;
+    font-size: 12px;
+    height: 28px;
+    line-height: 28px;
+    padding-left: 12px;
+    z-index: 10000388;
+    cursor: move;
+}
+
+.tb-dialog .tb-dialog-bd,
+.tb-dialog .tb-stdmod-body {
+    position: relative;
+    z-index: 10000388;
+    display: block;
+    border: 1px solid #A6A6A6;
+    border-top-width: 0;
+    background-color: #fff;
+    zoom: 1;
+}
+
+.tb-dialog .tb-dialog-ft {
+    position: absolute;
+    z-index: 10000388;
+    top: 8px;
+    right: 16px;
+}
+
+.tb-dialog .tb-ext-close {
+    background: url(http://img02.taobaocdn.com/tps/i2/T1LbYvXX8hXXcbU07.-12-12.gif) no-repeat scroll 0 6px transparent;
+    color: black;
+    cursor: pointer;
+    font-size: 14px;
+    height: 18px;
+    overflow: hidden;
+    position: absolute;
+    right: 16px;
+    text-decoration: none;
+    text-indent: -99px;
+    top: 14px;
+    width: 15px;
+    z-index: 10000388;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+
+.tb-dialog a:hover {
+    opacity: 1 !important;
+}
+
+.tb-dialog-dd .tb-dialog-hd,
+.ui-dd {
+    cursor: move;
+}
+
+.tb-dialog-mask,
+.tb-ext-mask {
+    position: absolute;
+    z-index: 10000388 !important;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+.tb-dialog-loading {
+    padding: 20px;
+    color: #000;
+    text-align: center;
+}
+
+.tb-dialog button {
+    margin-right: 15px;
+    padding: 4px 8px;
+    border: none;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    color: #000;
+    background-color: #d5d5d5;
+}
+
+.tb-dialog iframe.ifr {
+    display: block;
+    width: 100%;
+    height: 120px;
+    border: none;
+}
+
+#sidebar {
+    width: 180px;
+    float: left;
+    left: 0;
+    position: fixed;
+    _position: absolute;
+    *top: 35px;
+    _top: expression(document.getElementById('wrapper').scrollTop+'px');
+    background: #4a4a4a;
+    border-right: 4px solid #ff9966;
+    z-index: 10000386;
+}
+
+#sidebar .header {
+    width: 179px;
+    height: 50px;
+    overflow: hidden;
+    background: #a0a0a0;
+    border-right: 1px solid #4a4a4a;
+}
+
+#sidebar .header .title {
+    float: left;
+    height: 50px;
+    line-height: 50px;
+    overflow: hidden;
+}
+
+#sidebar .header .title .icon {
+    display: inline-block;
+    float: left;
+    margin: 13px 5px 14px 10px;
+    width: 23px;
+    height: 23px;
+    background: url(http://img02.taobaocdn.com/tps/i2/T1rC_0XjxkXXX7raLb-23-69.png) no-repeat;
+}
+
+#sidebar .header .title .icon-list {
+    background-position: 0 -23px;
+}
+
+#sidebar .header .title .icon-setting {
+    background-position: 0 0;
+}
+
+#sidebar .header .title .icon-analysis {
+    background-position: 0 -46px;
+}
+
+#sidebar .header .title .des {
+    display: inline-block;
+    float: left;
+    font-family: "Microsoft Yahei";
+    font-size: 18px;
+    color: #333;
+}
+
+#sidebar .header a.add {
+    display: block;
+    float: right;
+    width: 34px;
+    height: 50px;
+    background: url(http://img03.taobaocdn.com/tps/i3/T1ik2pXmRsXXXd9vTm-68-50.jpg) 0 0 no-repeat;
+    border-left: 1px solid #8d8d8d;
+}
+
+#sidebar .header a.add:hover {
+    background-position: -34px 0;
+}
+
+#sidebar .content {
+    width: 179px;
+    padding-bottom: 30px;
+    padding-top: 0;
+    border-top: 1px solid #424242;
+    border-right: 1px solid #4a4a4a;
+    color: #cccccc;
+}
+
+#sidebar .content a {
+    font-family: "SimSun";
+    color: #cccccc;
+}
+
+#sidebar .content a:hover {
+    text-decoration: none;
+}
+
+#sidebar .content .switch-trigger {
+    border-top: 1px solid #757575;
+    border-bottom: 1px solid #535353;
+    height: 30px;
+    line-height: 30px;
+    background: #6d6d6d;
+    color: #fff;
+    text-indent: 10px;
+    cursor: pointer;
+}
+
+#sidebar .content .switch-trigger a {
+    color: #fff;
+    display: block;
+}
+
+#sidebar .content .switch-hover {
+    background: #919191;
+}
+
+#sidebar .content .switch-active {
+    background: #dadada;
+    color: #666666;
+}
+
+#sidebar .content .switch-panel {
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+#sidebar .content .wrapper {
+    margin: 0px 1px 0px 2px;
+}
+
+#sidebar .content .wrapper .fst {
+    height: 30px;
+    line-height: 30px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#sidebar .content .wrapper .fst .icon {
+    display: inline-block;
+    float: left;
+    width: 9px;
+    height: 12px;
+    margin: 9px 5px 9px 8px;
+    background: url(http://img04.taobaocdn.com/tps/i4/T1M8TpXXNrXXahHe6a-18-12.gif) 0 0 no-repeat;
+}
+
+#sidebar .content .wrapper .fst span {
+    display: inline-block;
+    float: left;
+    width: 140px;
+    height: 30px;
+    overflow: hidden;
+}
+
+#sidebar .content .wrapper .fst-nochildren .ks-icon {
+    background: none;
+}
+
+#sidebar .content .wrapper .ks-active .ks-icon {
+    background-position: -9px 0;
+}
+
+#sidebar .content .wrapper .fst-hover {
+    background: #626262;
+}
+
+#sidebar .content .wrapper .snd li {
+    height: 22px;
+    line-height: 22px;
+    text-indent: 30px;
+}
+
+#sidebar .content .wrapper .snd li a {
+    display: block;
+    width: 176px;
+    height: 22px;
+    overflow: hidden;
+}
+
+#sidebar .content .wrapper .snd li a:hover {
+    background: #919191;
+    color: #fff;
+}
+
+#sidebar .content .wrapper .snd .cat-selected a:hover {
+    background: #e07120;
+    color: #fff;
+}
+
+#sidebar .content .wrapper .snd .cat-selected .cat-manage-link {
+    background-color: transparent;
+}
+
+#sidebar .content .wrapper .snd .cat-selected .cat-manage-link:hover {
+    background-color: transparent;
+}
+
+#sidebar .content .wrapper .cat-selected .fst,
+#sidebar .content .wrapper .cat-selected a {
+    background: #e07120;
+    color: #fff;
+}
+
+#sidebar .content .wrapper .cat-selected .snd-cat a {
+    background: #4A4A4A;
+    color: #cccccc;
+}
+
+#sidebar .content .wrapper .cat-selected .top-cat-hd .cat-name {
+    background: #E07120;
+    color: #fff;
+}
+
+#sidebar .content .wrapper .hide {
+    display: none;
+}
+
+#sidebar .content .nochildren-active {
+    background: #e07120;
+    border-top: 1px solid #e58a47;
+    border-bottom: 1px solid #e07120;
+}
+
+#sidebar .content .top-cat-hd {
+    height: 26px;
+    line-height: 26px;
+    text-indent: 10px;
+}
+
+#sidebar .content .top-cat-hd .cat-name {
+    display: block;
+    height: 24px;
+    line-height: 24px;
+    border-width: 1px 0 1px 0;
+    border-style: solid;
+    border-color: #4A4A4A;
+    cursor: pointer;
+}
+
+#sidebar .content .top-cat-hd .cat-name-hover {
+    border-color: #333333;
+    background: #626262;
+}
+
+#sidebar .content .cat-manage-link {
+    color: #fff;
+}
+
+#sidebar .content .cat-manage-link:hover {
+    text-decoration: underline;
+}
+
+#sidebar .ks-track,
+#sidebar .ks-track-hover,
+#sidebar .ks-track-active,
+#sidebar .ks-scrollbar,
+#sidebar .ks-arrowup,
+#sidebar .ks-arrowup-hover,
+#sidebar .ks-arrowup-active,
+#sidebar .ks-arrowdown,
+#sidebar .ks-arrowdown-hover,
+#sidebar .ks-arrowdown-active,
+#sidebar .ks-drag,
+#sidebar .ks-drag-hover,
+#sidebar .ks-drag-active,
+#sidebar .ks-dragtop,
+#sidebar .ks-dragbottom,
+#sidebar .ks-dragcenter {
+    width: 8px;
+}
+
+#sidebar .ks-scrollbar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+#sidebar .ks-track {
+    position: absolute;
+}
+
+#sidebar .ks-arrowup,
+#sidebar .ks-arrowdown,
+#sidebar .ks-arrowup a,
+#sidebar .ks-arrowdown a {
+    display: none;
+    text-indent: -1000px;
+    width: 8px;
+    height: 8px;
+    overflow: hidden;
+    border: 1px solid #000;
+    right: 0;
+    position: absolute;
+}
+
+#sidebar .ks-arrowup a,
+#sidebar .ks-arrowdown a {
+    border: none;
+}
+
+#sidebar .ks-arrowup {
+    background-color: #959695;
+    top: 0;
+}
+
+#sidebar .ks-arrowup-hover {
+    background-color: #9CCAE3;
+}
+
+#sidebar .ks-arrowup-active {
+    background-color: #3C7FB1;
+}
+
+#sidebar .ks-arrowdown {
+    background-color: #959695;
+    bottom: 0;
+}
+
+#sidebar .ks-arrowdown-hover {
+    background-color: #9CCAE3;
+}
+
+#sidebar .ks-arrowdown-active {
+    background-color: #3C7FB1;
+}
+
+#sidebar .ks-drag {
+    background-color: #000;
+    opacity: 0.3;
+    filter: alpha(opacity=30);
+    position: absolute;
+}
+
+#sidebar .ks-drag .ks-dragtop,
+#sidebar .ks-drag .ks-dragbottom {
+    display: none;
+}
+
+#sidebar .ks-drag .ks-dragcenter {
+    position: absolute;
+    top: 50%;
+    margin-top: -10px;
+    height: 20px;
+}
+
+#sidebar .ks-drag-hover {
+    opacity: 0.7;
+    filter: alpha(opacity=70);
+}
+
+#sidebar .ks-drag-active {
+    background: #e07120;
+}
+
+#sidebar .handle {
+    /*position: absolute;
+          right:-4px;
+          width:4px;
+          height:100%;
+          background:#ff9966;*/
+
+}
+
+#sidebar .handle .handler {
+    position: absolute;
+    right: -14px;
+    display: none;
+    width: 14px;
+    height: 43px;
+    background: #ff9966 url(http://img01.taobaocdn.com/tps/i1/T1yi_qXotkXXbDtprX-14-43.gif) 0 0 no-repeat;
+}
+
+.off {
+    margin-left: -180px;
+}
+
+.off .handle .handler {
+    background: #ff9966 url(http://img01.taobaocdn.com/tps/i1/T1WUjtXkNnXXcO68Tc-28-43.gif) -14px 0 no-repeat !important;
+}
+
+#footer {
+    margin: 20px auto 30px auto;
+    border-top: 1px solid #c9c9c9;
+    clear: both;
+
+}
+
+#footer p {
+    padding-top: 4px;
+    text-align: center;
+    color: #6a6a6a;
+}
+
+/*
+* 建站系统 按钮规范类  common
+*/
+a.btn {
+    display: inline-block;
+    padding: 3px 16px;
+    background-color: white;
+    color: #666;
+    border: 1px solid #D4D4D4;
+    font-size: 12px;
+    text-align: center;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a.btn-ok {
+    color: white;
+    background-color: #454545;
+}
+
+a.btn-del {
+    border: none;
+    color: #999;
+    padding-left: 4px;
+    padding-right: 4px;
+    background-color: transparent;
+}
+
+a:hover.btn-del {
+    color: #666;
+    text-decoration: underline;
+}
+
+a:hover.btn {
+    border-color: #b5b5b5;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/**
+*   建站系统，滚动条样式
+*/
+.ks-track,
+.ks-track-hover,
+.ks-track-active,
+.ks-scrollbar,
+.ks-arrowup,
+.ks-arrowup-hover,
+.ks-arrowup-active,
+.ks-arrowdown,
+.ks-arrowdown-hover,
+.ks-arrowdown-active,
+.ks-drag,
+.ks-drag-hover,
+.ks-drag-active,
+.ks-dragtop,
+.ks-dragbottom,
+.ks-dragcenter {
+    width: 8px;
+}
+
+.ks-track-hover {
+    background-color: #eeeeee;
+}
+
+.ks-scrollbar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.ks-track {
+    position: absolute;
+}
+
+.ks-arrowup,
+.ks-arrowdown,
+.ks-arrowup a,
+.ks-arrowdown a {
+    display: none;
+    text-indent: -1000px;
+    width: 8px;
+    height: 8px;
+    overflow: hidden;
+    border: 1px solid #000;
+    right: 0;
+    position: absolute;
+}
+
+.ks-arrowup a,
+.ks-arrowdown a {
+    border: none;
+}
+
+.ks-arrowup {
+    background-color: #959695;
+    top: 0;
+}
+
+.ks-arrowup-hover {
+    background-color: #9CCAE3;
+}
+
+.ks-arrowup-active {
+    background-color: #3C7FB1;
+}
+
+.ks-arrowdown {
+    background-color: #959695;
+    bottom: 0;
+}
+
+.ks-arrowdown-hover {
+    background-color: #9CCAE3;
+}
+
+.ks-arrowdown-active {
+    background-color: #3C7FB1;
+}
+
+.ks-drag {
+    background-color: #cbcbcb;
+    position: absolute;
+}
+
+.ks-drag .ks-dragtop,
+.ks-drag .ks-dragbottom {
+    display: none;
+}
+
+.ks-drag .ks-dragcenter {
+    position: absolute;
+    top: 50%;
+    margin-top: -10px;
+    height: 20px;
+}
+
+.ks-drag-hover {
+    background-color: #939393;
+}

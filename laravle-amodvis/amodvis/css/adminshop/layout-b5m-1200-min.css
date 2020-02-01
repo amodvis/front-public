@@ -1,0 +1,70 @@
+/*
+ amodvis目前采用了3种栅格布局：
+ 1200                 .grid-m
+ 200    990           .grid-sm
+ 990    200           .grid-ms
+*/
+
+
+#content .layout_bd {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/** 布局基础样式 **/
+.col-main {
+    float: left;
+    width: 100%;
+    /* bug fix: 主栏没有内容时，在 Firefox 和 Chrome 等浏览器下，布局不对 */
+    min-height: 1px;
+}
+/**
+ * 清除浮动，注：包含模块级的浮动清除
+ * after用于往标签的最后面元素设置样式  content: "\20" 是往最后增加空格
+ * 并且设置空格为块级元素，然后对它设置display:block;clear: both;并作兼容处理
+ */
+.grid-m:after, .grid-sm:after, .grid-ms:after, .main-wrap:after, .col-sub:after {
+    /**IE7以上跟其他主流浏览器支持*/
+    content: "\20";
+    display: block;
+    height: 0;
+    clear: both;
+}
+
+.grid-m, .grid-sm, .grid-ms, .main-wrap, .col-sub {
+    /**IE6*/
+    zoom: 1;
+}
+
+.col-main, .col-sub {
+    float: left;
+}
+
+#header .col-main .main-wrap,#footer .col-main .main-wrap{width: 1200px;margin: 0 auto;float: none;}
+
+/** 两栏布局 **/
+.grid-sm .col-main {
+    width: 100%;
+}
+
+.grid-sm .main-wrap {
+    margin-left: 210px;
+}
+
+.grid-sm .col-sub {
+    width: 200px;
+    margin-left: -100%;
+}
+
+.grid-ms .col-main {
+    width: 100%;
+}
+
+.grid-ms .main-wrap {
+    margin-right: 210px;
+}
+
+.grid-ms .col-sub {
+    width: 200px;
+    margin-left: -200px;
+}

@@ -1,0 +1,141 @@
+.J_TModule {
+    min-height: 100px;
+}
+
+body {
+    overflow: hidden;
+}
+
+#page {
+    overflow: hidden;
+    padding: 10px 0;
+}
+
+.tb-module {
+    min-height: 40px;
+}
+
+.J_TModule {
+    position: relative;
+}
+
+.bar {
+    position: absolute;
+    top: 0;
+}
+
+#wrapper {
+    overflow-x: hidden
+}
+
+#contents {
+    margin-top: 200px;
+}
+
+#footer {
+    margin-top: 200px;
+}
+
+#toolbar {
+    background: #fff none repeat scroll 0 0;
+    border-bottom: 1px solid #e4e4e4;
+    height: 30px;
+    position: fixed;
+    width: 100%;
+    z-index: 10000372;
+    top: auto;
+}
+
+#toolbar {
+    z-index: 10000366;
+}
+
+#navbar {
+    background: #333333;
+    border-bottom: 2px solid #000000;
+}
+
+#sidebar {
+    border-right: 4px solid #333333;
+}
+
+#sidebar .header {
+    background: url(../../images/add_page_btn.jpg) 0 0 no-repeat;
+}
+
+#sidebar .handle .handler {
+    background: url(../../images/slide_bar.png) 0 0 no-repeat;
+    right: -20px;
+    width: 16px;
+}
+
+.off .handle .handler {
+    background: url(../../images/slide_bar.png) -16px 0 no-repeat !important;
+}
+
+#sidebar .snd .checked {
+    background: #919191;
+}
+
+#sidebar .snd .checked a {
+    color: #ffffff;
+}
+
+#sidebar .header .title .des {
+    padding-left: 20px;
+    color: #defad8;
+}
+
+#navbar  {
+    padding-right: 50px;
+    overflow: hidden;
+}
+
+#navbar .pic_zone {
+    float: right;
+    line-height: 34px;
+    margin-right: 10px;
+    display: inline;
+    padding: 0 20px;
+    background: #3cc534;
+}
+
+#navbar a {
+    color: #defad8;
+    font-weight: bold;
+}
+
+#navbar  {
+    text-align: center;
+}
+
+#navbar  .notification {
+    padding: 0 30px;
+    line-height: 34px;
+    float: none;
+    margin: 0;
+    color: #defad8;
+    text-shadow: #206A17 0 1px 0;
+    border: 1px solid #206A17;
+    border-bottom: 0;
+    border-top: 0;
+    background: #3cc534;
+}
+
+#wrapper .bar:hover .barbd, #wrapper .bar.hover .barbd {
+    border-color: #3cc534;
+}
+
+#navbar .logo {
+    font-size: 24px;
+    color: #F9F9F9;
+    float: left;
+    background: url(../../images/slide_bar_logo.jpg) -18px 0 no-repeat;
+    width: 200px;
+    height: 34px;
+}
+.header .nav_create_page{
+    width: 80px;float: right;cursor: pointer;display: block;height: 50px;
+}
+#sidebar .header .title{width: 100%;}
+

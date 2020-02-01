@@ -1,0 +1,13 @@
+{
+    "name": "waterfall",
+    "version": "1.0",
+    "desc": "原官方瀑布流组件(绝对定位布局)",
+    "cover": "",
+    "author": {
+        "name": "踏风",
+        "email": "tafeng.dxx@taobao.com",
+        "page": "http://exodia.net"
+    },
+    "type": "kissy-pie",
+    "type-url": "http://abc.alibaba-inc.com/r/kissy-pie"
+}
