@@ -68,7 +68,9 @@ KISSY.add('modules/module_init/init_widget', function (S, JSON, Node, IO, DataLa
     /* 各模块具体的js代码{{{ */
     loadWidget.functions.loadWidget(".J_TWidget");
     window.createPopEdit = function (moduleHeight,module_nick_name) {
-
+        if(!module_nick_name){
+            module_nick_name = '';
+        }
         var editHtml = '<div class="bar" style="display: block; height: ' + moduleHeight + 'px;">\
         <div class="barbd" style="height:' + (moduleHeight + 2) + 'px;line-height:'+moduleHeight+'px;">'+module_nick_name+'</div>\
         <div class="baracts">';
